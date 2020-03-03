@@ -114,4 +114,11 @@ classes to realize the best possible implementation, considering OOP principles
 - Make `ProvisioningServiceImpl` able to support override fragments for some devices, according to the requirements
 - Tests for the implemented classes
 
-Note: The system will be tested by the examiner on the sample data by running `results.sh`
+All the code should be written in __**your own fork**__ of the repository (you can't push branches on this repository). 
+These are the steps:
+
+1. You create a public fork of this project on your Bitbucket account clicking [here](https://bitbucket.org/voverc/provisioning-hw/fork)
+2. You create a dedicated branch and a dedicated Pull Request towards your public fork (not towards https://bitbucket.org/voverc/provisioning-hw please)
+3. You share the Pull Request link with the reviewer
+
+Note: The system will be tested by the reviewer on the sample data by running `results.sh`
