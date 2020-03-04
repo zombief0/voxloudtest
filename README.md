@@ -32,22 +32,22 @@ The two device types use the following configuration file formats:
 #### Desk: Property file ####
 
 ```
-username=jon
-password=doe
-domain=sip.voverc.com
-port=5060
-codecs=G711,G729,OPUS
+username=john         # From database
+password=doe          # From database
+domain=sip.voverc.com # From application.properties
+port=5060             # From application.properties
+codecs=G711,G729,OPUS # From application.properties
 ```
 
 #### Conference: JSON file ####
   
 ```json
 {
-  "username" : "john",
-  "password" : "doe",
-  "domain" : "sip.voverc.com",
-  "port" : "5060",
-  "codecs" : ["G711","G729","OPUS"]
+  "username" : "john",              // From database
+  "password" : "doe",               // From database
+  "domain" : "sip.voverc.com",      // From application.properties
+  "port" : "5060",                  // From application.properties
+  "codecs" : ["G711","G729","OPUS"] // from application.properties
 }
 ```
 
@@ -55,20 +55,20 @@ The final configuration file should be created by taking data from database and 
 in `provisioning.*` namespace in `application.properties`
 
 ### Override fragment ###
-In addition to automatic provisioning described above, there should be the possibility to manually override final 
-configuration file, by providing a file fragment (Property or JSON file) that can replace or add some configuration 
-properties. Let's see the two cases:
+In addition to standard provisioning described above, there should be the possibility to manually override final 
+configuration file, by providing a file fragment in the database (it should be Property or JSON file) that can replace or add some configuration 
+properties at runtime. Let's see the two cases:
 
 #### Desk: Property file ####
 ```
-username=john
-password=doe
-domain=sip.anotherdomain.com
-port=5161
-codecs=G711,G729,OPUS
-timeout=10
+username=john                # From database
+password=doe                 # From database
+domain=sip.anotherdomain.com # From override fragment (replaced application.properties)
+port=5161                    # From override fragment (replaced application.properties)
+codecs=G711,G729,OPUS        # From application.properties
+timeout=10                   # From override fragment (added)
 ```
-where the override fragment is:
+where the override fragment in the database is:
 ```
 
 domain=sip.anotherdomain.com
@@ -80,15 +80,15 @@ timeout=10
   
 ```json
 {
-  "username" : "jon",
-  "password" : "doe",
-  "domain" : "sip.anotherdomain.com",
-  "port" : "5161",
-  "codecs" : ["G711","G729","OPUS"],
-  "timeout" : 10
+  "username" : "john",                // From database
+  "password" : "doe",                 // From database
+  "domain" : "sip.anotherdomain.com", // From override fragment (replaced application.properties)
+  "port" : "5161",                    // From override fragment (replaced application.properties)
+  "codecs" : ["G711","G729","OPUS"],  // From application.properties
+  "timeout" : 10                      // From override fragment (added)
 }
 ```
-where the override fragment is:
+where the override fragment in the database is:
 ```
 
 {
@@ -114,11 +114,11 @@ classes to realize the best possible implementation, considering OOP principles
 - Make `ProvisioningServiceImpl` able to support override fragments for some devices, according to the requirements
 - Tests for the implemented classes
 
-All the code should be written in __**your own fork**__ of the repository (you can't push branches on this repository). 
+All the code should be pushed in __**your public Git repository**__(Bitbucket, Github, etc), since you can't push branches on this repository. 
 These are the steps:
 
-1. You create a public fork of this project on your Bitbucket account clicking [here](https://bitbucket.org/voverc/provisioning-hw/fork)
-2. You create a dedicated branch and a dedicated Pull Request towards your public fork (not towards https://bitbucket.org/voverc/provisioning-hw please)
-3. You share the Pull Request link with the reviewer
+1. You create a public fork of this project on your Bitbucket account clicking [here](https://bitbucket.org/voverc/provisioning-hw/fork) or you clone it and push to your account if you use other Git platforms (Github, Gitlab, etc)
+2. You create a dedicated branch named feature/provisioning-hw
+3. You share the (public) repository link with the reviewer
 
 Note: The system will be tested by the reviewer on the sample data by running `results.sh`
