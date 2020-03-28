@@ -24,7 +24,8 @@ GET /api/v1/provisioning/aa-bb-cc-11-22-33
 
 The server stores a table that contains all the phones in the inventory. If a phone is found in the inventory then its
 configuration file should be dynamically generated, according to the phone model configuration format. If a phone is not 
-found in the inventory, the server should deny the provisioning request, returning a proper HTTP error code. 
+found in the inventory, the server should deny the provisioning request, returning a proper HTTP error code.
+As an additional requirement, the system should be able to support new device type provisioning with minimal code/configuration change.
 
 ### Configuration file formats ###
 The two device types use the following configuration file formats:
