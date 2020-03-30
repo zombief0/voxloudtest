@@ -119,7 +119,7 @@ All the code should be pushed in __**your public Git repository**__(Bitbucket, G
 These are the steps:
 
 1. You create a public fork of this project on your Bitbucket account clicking [here](https://bitbucket.org/voverc/provisioning-hw/fork) or you clone it and push to your account if you use other Git platforms (Github, Gitlab, etc)
-2. You create a dedicated branch named feature/provisioning-hw
-3. You share the (public) repository link with the reviewer
+2. You commit and push to your fork master branch
+3. You share the (public) repository link with the reviewer when development is completed
 
 Note: The system will be tested by the reviewer on the sample data by running `results.sh`
