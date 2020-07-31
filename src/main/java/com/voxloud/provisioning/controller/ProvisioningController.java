@@ -1,4 +1,4 @@
-package com.voverc.provisioning.controller;
+package com.voxloud.provisioning.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

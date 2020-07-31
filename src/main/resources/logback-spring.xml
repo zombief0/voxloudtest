@@ -13,6 +13,6 @@
         <appender-ref ref="CONSOLE"/>
     </root>
 
-    <logger name="com.voverc.provisioning" level="INFO"/>
+    <logger name="com.voxloud.provisioning" level="INFO"/>
 
 </configuration>

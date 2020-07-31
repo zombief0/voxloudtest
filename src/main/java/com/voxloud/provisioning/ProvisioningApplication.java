@@ -1,4 +1,4 @@
-package com.voverc.provisioning;
+package com.voxloud.provisioning;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

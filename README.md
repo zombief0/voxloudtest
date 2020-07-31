@@ -35,7 +35,7 @@ The two device types use the following configuration file formats:
 ```
 username=john         # From database
 password=doe          # From database
-domain=sip.voverc.com # From application.properties
+domain=sip.voxloud.com # From application.properties
 port=5060             # From application.properties
 codecs=G711,G729,OPUS # From application.properties
 ```
@@ -46,7 +46,7 @@ codecs=G711,G729,OPUS # From application.properties
 {
   "username" : "john",              // From database
   "password" : "doe",               // From database
-  "domain" : "sip.voverc.com",      // From application.properties
+  "domain" : "sip.voxloud.com",      // From application.properties
   "port" : "5060",                  // From application.properties
   "codecs" : ["G711","G729","OPUS"] // from application.properties
 }
@@ -118,7 +118,7 @@ classes to realize the best possible implementation, considering OOP principles
 All the code should be pushed in __**your public Git repository**__(Bitbucket, Github, etc), since you can't push branches on this repository. 
 These are the steps:
 
-1. You create a public fork of this project on your Bitbucket account clicking [here](https://bitbucket.org/voverc/provisioning-hw/fork) or you clone it and push to your account if you use other Git platforms (Github, Gitlab, etc)
+1. You create a public fork of this project on your Bitbucket account clicking [here](https://bitbucket.org/voxloud/provisioning-hw/fork) or you clone it and push to your account if you use other Git platforms (Github, Gitlab, etc)
 2. You commit and push to your fork master branch
 3. You share the (public) repository link with the reviewer when development is completed
 
