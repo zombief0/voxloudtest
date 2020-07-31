@@ -1,3 +1,5 @@
+![Voxloud Logo](https://www.voxloud.com/wp-content/uploads/2020/07/voxloud_logo_@1x.png)
+
 # Provisioning server #
 
 ## Context ##
